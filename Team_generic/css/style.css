@@ -1,0 +1,325 @@
+.field-error{
+color: red
+}
+
+
+#wrapper {
+    background-color: #ECECEC;
+    border: 1px solid #888888;
+    //margin: 2% auto;
+    padding: 30px;
+    //width: 50%;
+}
+#details, #seats, #total-amount, #date-div, #ticket-type-div, #fare-div, #fare-div {
+    margin: 23px 0;
+}
+.field, #available-seats {
+    margin-right: 30px;
+}
+.select-label {
+    font-weight: bold;
+}
+#book {
+    text-decoration: none;
+}
+#fare-div, #available-seats-div {
+	//display:none;
+}
+#seats-info, .seats-info-lable {
+	padding-left: 5px;
+	float: right;
+}
+#seats-info div, .seats-info-lable div {
+	padding:5px 0px;
+}
+#book-div span, #register-signin  span, #login-page .signup-button, #login-page #signin, #profile-page #update_profile, #registration-page #sumit_reg_form, .ticket-confirm {
+    background-image: url("../images/btn-bg.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 34px;
+    padding: 8px;
+    width: 60px;
+}
+.ticket-confirm {
+	margin-top: 20px;
+}
+.ticket-confirm  a {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 15px;
+}
+#profile-page #book-div span, #login-page .signup-button, #register-signin  span{
+	text-align: center;
+    width: 70px;
+}
+#book-div {
+	margin-top: 20px;
+}
+#book-div span a, #login-page .signup-button a , #register-signin  span a{
+	color:#CCCCCC;
+	font-size: 15px;
+    font-weight: bold;
+}
+#seats-info div img {
+	width: 17px; 
+	height: 17px;
+	margin-bottom:-5px;
+}
+#seats-display {
+    border: 1px solid #888888;
+    padding: 20px;
+    width: 325px;
+    margin-left:0px;
+}
+#seats-info {
+    border: 1px solid #888888;
+    float: right;
+    margin-top: -430px;
+    padding: 9px;
+    text-align: left;
+    width: 179px;
+}
+.message {
+	color: #EF7100;
+}
+.available: hover{
+	background-color: green;
+}
+.header-title {
+    background-color: #F6FF05;
+    color: #000000;
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 7px 7px;
+    text-align: left;
+}
+.footer-bottom a {
+    //color: #B2AEAE;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer-div {
+    background-color: #F6FF05;
+    margin-top: 50px;
+}
+#home-page .footer-div {
+    margin-top: 20px !important;
+}
+.profile-footer-div {
+    background-color: #F6FF05;
+    width: 1000px;
+}
+#profile-page #wrapper, #login-page #wrapper, #registration-page #wrapper {
+    background-color: #ECECEC;
+    border: 1px solid #888888;
+    font-weight: bold;
+    padding: 30px;
+    text-align: left;
+}
+#profile-page #wrapper fieldset, #login-page #wrapper  fieldset, #registration-page #wrapper  fieldset {
+	padding: 30px;
+}
+#profile-page #wrapper .field-required, #login-page #wrapper .field-required, #registration-page #wrapper .field-required  {
+	color: red;
+}
+#profile-page #wrapper input, #login-page #wrapper input, #registration-page #wrapper  input  {
+	margin-bottom: auto;
+	width: 200px;
+	margin-left: 30px;
+}
+#profile-page #wrapper legend, #login-page #wrapper  legend, #registration-page #wrapper  legend {
+	font-size: 15px;
+}
+#profile-page #note { text-align: left; padding: 30px;}
+#profile-page #note span { color:#FFFFFF;}
+
+#profile-page #user_name { margin-left:31px !important;}
+#profile-page #email { margin-left:10px !important;}
+#profile-page #address { margin-left: 47px !important;}
+#profile-page #mobile_number { margin-left:1px !important;}
+#login-page #username { margin-left:22px !important;}
+
+
+#home-page #note { text-align: left; padding-top: 30px; padding-left: 30px;}
+#home-page #note span { color:#FFFFFF;}
+
+#registration-page #lastname {  margin-left: 57px !important;}
+#registration-page #confirm-password {  margin-left: 5px !important;}
+#registration-page #firstname { margin-left: 51px !important;}
+#registration-page #email { margin-left: 29px !important;}
+#registration-page #address { margin-left: 78px !important;}
+#registration-page #mobileno { margin-left: 25px !important;}
+#registration-page #username { margin-left: 50px !important;}
+#registration-page #password { margin-left: 58px !important;}
+
+#registration-page.field-error { color: red}
+
+
+#login-page .signup-button { margin-top: 20px !important; }
+
+#login-page #signin, #profile-page #update_profile, #registration-page #sumit_reg_form, #register-signin span {
+	margin-left: 0px !important;
+	width: 85px !important;
+	cursor: pointer;
+	font-weight: bold;
+	color: #CCCCCC;
+}
+#register-signin { text-align: left;}
+#login-page .error {
+    background-color: yellow;
+    border: 1px solid red;
+    color: red;
+    margin-bottom: 16px;
+    padding: 0 0 6px 108px;
+}
+#profile-page .error-success {
+	background-color: #F0FFF0;
+    border: 1px solid #00FF00;
+    margin-bottom: 16px;
+    padding: 6px 0 6px 108px;
+}
+
+#selected-ticket-summary {
+	margin-top: 30px;
+}
+#selected-ticket-summary legend {
+	font-size: 15px;
+	font-weight: bold;
+}
+#selected-ticket-summary-div {
+	text-align: left; 
+	padding: 30px 82px;
+}
+#selected-ticket-summary-div div {
+	font-weight: bold;
+	font-size: 12px;
+	margin: 20px 10px 16px 22px;
+}
+#selected-ticket-summary-indiv span {
+	color: #EF7100;
+	font-size: 15px;
+    font-weight: bold;
+}
+#selected-ticket-summary-indiv .sum_label  {
+	color: #000000;
+}
+#thanks-for-booking a {
+	color: #0000FF;
+}
+#thanks-for-booking {
+    background-color: #F0FFF0;
+    border: 1px solid #00FF00;
+    font-size: 20px;
+    padding: 20px;
+}
+table th, table td {
+    margin: 0.1em;
+    padding: 0.1em 0.5em;
+    vertical-align: top;
+}
+th {
+    background: none repeat scroll 0 0 #D3DCE3;
+    color: #000000;
+    font-weight: bold;
+}
+table tr.odd, table tr.even {
+    text-align: left;
+	font-size: 13px !important;
+}
+table tr.odd, .odd {
+    background: none repeat scroll 0 0 #E5E5E5;
+}
+table tr.even, .even {
+    background: none repeat scroll 0 0 #D5D5D5;
+}
+.odd:hover, .even:hover, .hover {
+    background: none repeat scroll 0 0 #CCFFCC;
+    color: #000000;
+}
+.active {
+    background: none repeat scroll 0 0 #CCFFCC;
+	border: 1px solid #888888;
+}
+div.history {
+    background: none repeat scroll 0 0 #F5F5F5;
+    color: #000000;
+    font-family: sans-serif;
+    //margin: 0.5em;
+    padding: 0;
+	font-size: 13px;
+}
+#accordion {
+    margin-bottom: 20px;
+}
+#accordion h3 {
+	text-align: left;
+}
+#accordion div.history {
+    //height: 389px;
+}
+fieldset {
+    background: url("../images/gradient-inner.png") repeat-x scroll 0 0 #FFFFFF;
+    border: 1px solid #D9EAF5;
+    margin: 1em 0;
+    padding: 1em;
+}
+legend a, legend span {
+	font-size: 15px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.movie-data {
+	text-align: left;
+	margin-bottom: 20px;
+}
+.movie-list {
+	text-align: left;
+    font-size: 15px;
+	font-weight:bold;
+}
+.movie-list a {
+	color: #138995;
+}
+.more-movies {
+	text-align: right;
+	font-size: 13px;
+	font-weight: bold;
+}
+.movie-data-label {
+    font-size: 15px;
+	font-weight: bold;
+}
+.movie-data-value {
+    font-size: 15px;
+	font-weight: bold;
+	color: #EF7100;
+}
+.movie-list span {
+    margin-right: 20px;
+}
+.movie-list-div {
+	background-color: #FFFFFF;
+}
+#movie-details-page  .main, .main { 
+	height: 250px;
+}
+.movie-redirect {
+	color: #0000FF;
+}
+.slider-selected-image, .slider-image, .slides_container {
+    height: 250px;
+    width: 700px;
+}
+.no-booking-history {
+	font-size: 15px;
+	font-weight: bold;
+	color: red;
+}
+.no-booking-history a{
+	font-size: 15px;
+	font-weight: bold;
+	color:#0000FF;
+}

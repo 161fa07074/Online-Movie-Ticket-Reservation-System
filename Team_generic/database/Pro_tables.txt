@@ -1,0 +1,112 @@
+create table users
+(user_id number(32) primary key,
+user_name varchar(32),
+password varchar(32) not null,
+email varchar(32) not null,
+first_name varchar(32) not null,
+last_name varchar(32) not NULL,
+address varchar(32),
+mobile_number number(10) check(mobile_number>7000000000 and mobile_number<9999999999),
+rid varchar(32) references roles(rid),
+sid varchar(32) default set (sid='0'),
+login_time date default set (login_time=NULL),
+logout_time date dafault set (logout_time=NULL)
+);
+
+create table roles
+(rid varchar(32) primary key,
+roles varchar(32) check ( roles='admin' or roles='editor' or roles='customer')
+);
+
+
+create table cities
+(city_id varchar(32) primary key,
+state_id varchar(32) not null,
+city varchar(32) not null
+);
+
+create table theatres
+(theatre_id varchar(32) primary key,
+city_id varchar(32) references cities(city_id),
+theatre_name varchar(32),
+manager varchar(32)
+);
+
+
+create table screens
+(screen_id varchar(32) primary key,
+screen_name varchar(32),
+theatre_id varchar(32) references theatres(theatre_id),
+screen_capactiy int
+);
+
+create table show_timing
+(show_time_id varchar(32) primary key,
+show_time date
+);
+
+create table movies
+(movie_id varchar(32) primary key,
+movie_name varchar(32) not null,
+movie_director varchar(32),
+movie_decription varchar(32),
+movie_language varchar(32),
+islive varchar(32) check(islive='Running' or islive='Not running')
+);
+
+create table theatre_show_timings
+(theatre_show_time_id varchar(32) primary key,
+screen_id varchar(32) references screens(screen_id),
+show_time_id varchar(32) reference show_timing(show_time_id),
+movie_id varchar(32) references movies(moive_id),
+start_date date not null,
+end_date date
+);
+
+create table ticket_rate
+(
+ticket_rate_id varchar(32) primary key,
+screen_id varchar(32) references screens(screen_id),
+ticket_type varchar(32) check(ticket_type='gold' or ticket_type='silver' or ticket_type='platinum')
+price int
+);
+
+create table booking_ticket_for_theatre
+(
+booking_id varchar(32) primary key,
+user_id varchar(32) references users(user_id),
+screen_id varchar(32) references screens(screen_id),
+movie_id varchar(32) references movies(movie_id),
+theatre_showtime_id varchar(32) references theatre_show_timings(theatre_show_time_id),
+date_of_booking date not null,
+ticket_rate_id varchar(32) references ticket_rate(ticket_rate_id),
+total_amount int
+);
+
+creat table user_selected_seats
+(
+user_selected_seats_id varchar(32) primary key,
+user_id varchar(32) references users(user_id),
+screen_id varchar(32) references screens(screen_id),
+movie_id varchar(32) references movies(movie_id),
+theatre_showtime_id varchar(32) references theatre_show_timings(theatre_show_time_id),
+seat_number varchar(32) not null,
+booking_id varchar(32) references booking_ticket_for_theatre(booking_id),
+selected_date_of_show date not null
+);
+
+
+
+ALTER TABLE screens
+ADD CONSTRAINT fk_theatre_id FOREIGN KEY(theatre_id) REFERENCES theatres (theatre_id)
+
+ALTER TABLE user_selected_seats
+ADD CONSTRAINT fk_user_id FOREIGN KEY(user_id) REFERENCES users (user_id);
+ALTER TABLE user_selected_seats
+ADD CONSTRAINT fk_screen_id FOREIGN KEY(screen_id) REFERENCES screens (screen_id);
+ALTER TABLE user_selected_seats
+ADD CONSTRAINT fk_movie_id FOREIGN KEY(movie_id) REFERENCES movies (movie_id);
+ALTER TABLE user_selected_seats
+ADD CONSTRAINT fk_theatre_showtime_id FOREIGN KEY(theatre_showtime_id) REFERENCES theatre_show_timings (theatre_showtime_id);
+ALTER TABLE user_selected_seats
+ADD CONSTRAINT fk_booking_id FOREIGN KEY(booking_id) REFERENCES  Structure booking_ticket_for_theatre (booking_id);
